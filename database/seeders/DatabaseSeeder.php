@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        GenerateUsers::class, GenerateGuestbook::class,
+        $this->call([
+            GenerateUsers::class, GenerateGuestbook::class,
+        ]);
     }
 }
