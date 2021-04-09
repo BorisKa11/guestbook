@@ -18,9 +18,11 @@
             </div>
         </div>
     @endif
+    @auth
     <div class="item-bottom">
         <a href="javascripot:;" class="item__answer answerLink" data-id="{{ $message->id }}">ответить</a>
     </div>
+    @endauth
     @if ($message->childrens()->count())
         <div class="opensub">
             @if (!isset($subitem))
