@@ -1,0 +1,18 @@
+.guestbook {margin: 10px 0;}
+
+.item {border: 1px solid #ddd;border-radius: 12px;padding: 5px 12px;margin-bottom: 15px;
+  &__top {display: flex;justify-content: space-between;}
+  &__date {color: #777;font-size: .8rem;}
+  &__user {font-weight: 600;}
+  &__message {border: 1px solid #ccc;padding: 10px 15px;margin: 10px 0;}
+  &__btn {font-size: 11px;line-height: 18px;padding: 6px 15px;position: relative;cursor: pointer;transition: .3s all;
+    display: inline-block;border-radius: 6px;}
+  &__btn:hover {background-color: #eee;}
+  &__btn:before {content: '\2193';margin-right: 5px;font-size: 18px;position: absolute;left: 5px;}
+  &__btn.up:before {content: '\2191';}
+  &__img {display: none;}
+  &__link-edit {width: 30px;height: 30px;display: block;position: relative;border-radius: 4px;}
+  &__link-edit:hover {text-decoration: none;background-color: #98c9ff;}
+  &__link-edit:before {content: "✏";position: absolute;top: 3px;left: 7px;}
+}
+.item.subitem {border: none;border-left: 1px solid #007bff;border-radius: 0;padding-bottom: 0px;margin-top: 10px;display: none;padding-right: 0;}

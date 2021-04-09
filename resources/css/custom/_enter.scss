@@ -1,0 +1,37 @@
+.enter {position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;
+  display: flex;justify-content: center;flex-direction: column;display: none;transition: 0.3s all;
+  &__close {position: absolute;right: 32px;top: 32px;width: 60px;height: 60px;opacity: 0.3;z-index: 100;
+    background-color: #132bd0;border-radius: 6px;transition: 0.3s all;
+    &:hover {
+      opacity: 1;
+    }
+    &:before, &:after {
+      position: absolute;
+      left: 29px;
+      top: 14px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: #fff;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  &__fon {position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;z-index: 99;background-color: #007bff;opacity: 0.8;}
+  &__form {width: 380px;margin-left: calc(50% - 190px);z-index: 100;position: relative;color: #fff;
+    &__next {color: #ccc;}
+    &__next:hover {color:#fff;text-decoration: none;}
+  }
+  &__h3 {font-size: 1.5rem;}
+  &__form small {font-size: 10px;}
+  &__form input, &__form textarea {background: transparent;transition: 0.3s all;}
+  &__form input::placeholder, &__form textarea::placeholder {color: #ccc;}
+  &__form input:active, &__form input:focus, &__form textarea:focus, &__form textarea:active {background-color: #fff;}
+  &__form .bottom {display: flex;justify-content: space-between;margin-top: 10px;padding-top: 10px;border-top: 1px solid #aaa;}
+}
+
+.enter.open {display: flex;}
